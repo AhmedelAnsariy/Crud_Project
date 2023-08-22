@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <!-- css files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800;900&family=Work+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="d-flex align-items-center justify-content-center flex-column">
+
+  
+    <div class="back w-75" style="margin-top: 90px; border-radius: 6px;">
+
+      <h2 class="title mt-2">Crud System</h2>
+       <div class="container m-2  w-100 p-5 rounded-3 bg-opacity-10">
+
+      
+
+        
+        <input type="text" placeholder="enter product name" class="form-control mx-auto mb-4 w-75" id="prodName" style="font-size: 18px;">
+
+     
+        <input type="number" placeholder="enter product price" class="form-control mx-auto w-75 mb-4" id="prodPrice"style="font-size: 18px;">
+
+
+    
+        <textarea  rows="5" class="form-control w-75  mx-auto mb-3" placeholder="enter product description" id="prodDescription" style="font-size: 18px;"></textarea>
+  
+        
+     
+        <select id="select-input" name="select-input" class="form-select  mx-auto w-75 " aria-label="Default select example" aria-placeholder="select type of products" >
+          <!-- <option>Choose type of products</option> -->
+          <option value="Electronics">Electronics</option>
+          <option value="Foods">Foods</option>
+          <option value="Drinks">Drinks</option>
+          <option value="furniture">furniture</option>
+          <option value="Medicines">Medicines</option>
+          <option value="Baby Belongings">Baby Belongings</option>
+          <option value="Accessories">Accessories</option>
+          <option value="General">General</option>
+        </select>
+  
+   
+        <input type="number" class="form-control mb-4 mx-auto w-75 mt-4" placeholder="How many items " id="productQuantity" style="font-size: 18px;">
+  
+        <div class="butonnnns d-flex align-items-center justify-content-center">
+          <button class="btn addbtn     text-white"    onclick="addProducts()"   id="addBtn" style=" font-size: 20px;">Add product <i class="fa-solid fa-plus ms-1"></i> </button>
+
+          <button class="btn btn-info d-none    " id="updataBtn" onclick="updateProduct()">Update product</button>
+        </div>
+       
+  
+        <div class="container  mt-3">
+          <div class="search  ">
+            <label for="search" class="form-label  mx-4 mt-2" style="color: #003840 !important;">Search For Specific Product : </label>
+            <input type="text"  id="search" class="form-control mt-1 mb-3 mx-auto w-75 " placeholder="search . . . . . " onkeyup="search(this.value)" >
+          </div>
+      
+        </div>
+      </div>
+    </div>
+    
+     
+  
+  
+
+
+
+
+
+
+
+      <button class="btn btn-danger mt-3  " onclick="clearTable()"  style="font-size: 20px;">Clear all  Table <i class="fa-solid fa-trash ms-2"></i></button>
+    <div class="container m-3 ">
+      <table class="table table-hover m-4  shadow-lg ">
+        <thead>
+          <th class="p-3">Id</th>
+          <th class="p-3">Name</th>
+          <th class="p-3">Price</th>
+          <th class="p-3">Description</th>
+          <th class="p-3">Type</th>
+          <th class="p-3">Quantity</th>
+          <th class="p-3">Update</th>
+          <th class="p-3">Delete</th>
+        </thead>
+
+        <tbody id="demo">
+        </tbody>
+      </table>
+
+     
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+   
+  </body>
+</html>
